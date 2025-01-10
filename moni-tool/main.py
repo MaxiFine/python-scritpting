@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from app.log_aggregator import fetch_local_logs, parse_logs_to_dataframe, query_logs
+from app.log_aggregator import fetch_local_logs, parse_logs_to_dataframe, query_logs, aggregate_logs_by_level
 
 app = Flask(__name__)
 
