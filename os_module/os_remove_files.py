@@ -13,4 +13,4 @@ path = os.path.join(location, file)
 # removing the file 
 os.remove(path)
 print(f"File '{file}' removed from location: {location}")
-os.listdir(location)  # listing files in the current directory
+os.listdir(location)  
