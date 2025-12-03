@@ -17,7 +17,9 @@ def get_platform_info():
             platform.system(),
             platform.release(),
             platform.version()
-        )  # Tuple with (system, release, version)
+        ),  # Tuple with (system, release, version)
+        "uname": platform.uname(),           # Named tuple with system info
+        "machineNode": platform.node(),         # Network name (hostname)
     }
     return info
 
@@ -26,7 +28,7 @@ if __name__ == "__main__":
     print("=== Platform Information ===")
     platform_info = get_platform_info()
     for key, value in platform_info.items():
-        print(f"{key.capitalize()}: {value.capitalize()}")
+        print(f"{key.capitalize()}: {value}")
     
 # Example output on Linux: ['ubuntu', 'debian']
 # Example output on Windows: Shows Windows platform info
