@@ -11,7 +11,7 @@ A comprehensive Python learning repository featuring practical examples of OS mo
   - [AWS Monitoring](#aws-monitoring)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#-usage)
 - [Learning Objectives](#learning-objectives)
 - [Contributing](#contributing)
 
@@ -70,6 +70,7 @@ Located in `pymonitoring/project/`, this section includes a robust system monito
 #### **`my-system.py`** - Real-time System Monitor
 
 **Features:**
+
 - 📊 Real-time CPU usage monitoring
 - 📝 Log file parsing and analysis
 - 🔍 Pattern-based log filtering (ERROR, WARNING, INFO)
