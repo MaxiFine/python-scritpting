@@ -12,6 +12,12 @@ def get_platform_info():
         "machine": platform.machine(),         # Machine type (e.g., 'x86_64', 'AMD64')
         "processor": platform.processor(),     # Processor name
         "platform": platform.platform(),       # Complete platform string
+        "edition": platform.win32_edition() if platform.system() == "Windows" else "N/A",  # Windows edition
+        "system_alias": platform.system_alias(
+            platform.system(),
+            platform.release(),
+            platform.version()
+        )  # Tuple with (system, release, version)
     }
     return info
 
