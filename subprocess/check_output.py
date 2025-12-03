@@ -8,13 +8,19 @@ try:
     
     # Get current working directory - platform-specific
     if platform.system() == "Windows":
-        # On Windows, use 'cd' or PowerShell command
-        paths = subprocess.check_output(["powershell", "-Command", "Get-Location"], text=True)
+        # On Windows, use PowerShell command (returns just the path)
+        paths = subprocess.check_output(
+            ["powershell", "-Command", "(Get-Location).Path"], 
+            text=True
+        )
     else:
         # On Unix/Linux/macOS, use 'pwd'
         paths = subprocess.check_output(["pwd"], text=True)
     
-    print(f"Current Working Directory: {paths.strip()}")
+    print(f"Current Working Directory: {paths}")
+    print(f"Type of paths: {type(paths)}")
+    print(f"Length of paths string: {len(paths)}")
+    print(f"First 10 characters of paths:\n {paths.strip()}")
 
 except subprocess.CalledProcessError as e:
     print(f"Command failed with return code {e.returncode}")
