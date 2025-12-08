@@ -1,5 +1,7 @@
 # OS Module in Python - Complete Guide
 
+# Quick Ref: [https://www.geeksforgeeks.org/python/os-module-python-examples/]
+
 The `os` module in Python provides functions for interacting with the operating system. It comes under Python's standard utility modules and provides a portable way of using operating system-dependent functionality.
 
 ##  QUICK LINK 
